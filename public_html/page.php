@@ -2,7 +2,7 @@
   //This is main.php and start function file.
   //basic system file.
   $logic_speed_start = microtime (TRUE);
-  if (!(include ($include_dir = system_dir.'/lib/start.php'))) {
+  if (!(include ($include_dir = dirname (__FILE__).'/../lib/start.php'))) {
     stdio::add_log (stdio::fail ('openfile').$include_dir); unset ($include_dir);
     exit ();
   }
