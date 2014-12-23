@@ -1,0 +1,12 @@
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+
+RewriteCond %{REQUEST_URI} !/assets/
+RewriteRule ^(.*)$ page.php?%{QUERY_STRING}&page_url_request=$1 [L]
+
+#RewriteCond %{REQUEST_URI} /assets/
+#RewriteRule ^assets/(.*)$ assets.php?%{QUERY_STRING}&page_url_request=$1 [L]
+
+Options -Indexes
+DirectoryIndex page.php index.html
