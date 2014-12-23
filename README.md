@@ -1,4 +1,4 @@
-Floop
+Floop (Alpha)
 =====
 
 Floop.
